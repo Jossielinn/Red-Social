@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td> Id:</td>
+            <td>
+                <input type="text" name="id" id="user_id">
+            </td>
+        </tr>
+        <tr>
+            <td>User Name:</td>
+            <td>
+                <input type="text" name="user_name" id="user_name">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <input type="button" value="Save" onclick="save_user();" />
+                <input type="button" value="Update" onclick="update_user();" />
+                <input type="button" value="Delete" onclick="delete_user();" />
+            </td>
+        </tr>
+    </table>
+
+    <h3>Usuarios</h3>
+
+    <table id="tbl_users_list">
+        <tr>
+            <td>#ID</td>
+            <td>NAME</td>
+        </tr>
+    </table>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyD69NK6i5GCpkrP6cd8sRjaX-0ujSQuKvs",
+            authDomain: "socialnetwork-6674c.firebaseapp.com",
+            databaseURL: "https://socialnetwork-6674c.firebaseio.com",
+            projectId: "socialnetwork-6674c",
+            storageBucket: "socialnetwork-6674c.appspot.com",
+            messagingSenderId: "648022811826"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
