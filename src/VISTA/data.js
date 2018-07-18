@@ -126,11 +126,14 @@ auth.sendPasswordResetEmail(emailAddress).then(function() {
 }).catch(function(error) {
   // An error happened.
 });
-})
+})*/
+
 const ingreso = () => {
-    const emailLogin = document.getElementById('email-login').value;
-    const passwordLogin = document.getElementById('password-login').value;
-    firebase.auth().signInWithEmailAndPassword(emailLogin, passwordLogin).catch(function (error) {
+    const emailLogin = document.getElementById('correo-sesion').value;
+    const passwordLogin = document.getElementById('password-sesion').value;
+    firebase.auth().signInWithEmailAndPassword(emailLogin, passwordLogin).then(() => {
+        nuevaPagina("interfaz.html");
+    }).catch(function (error) {
         // Handle Errors here.
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -138,4 +141,3 @@ const ingreso = () => {
         console.log(errorMessage);
     });
 };
-*/

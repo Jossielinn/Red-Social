@@ -42,7 +42,7 @@ sesion.addEventListener('click', () => {
     registro.classList.add("inactive");
 })
 buttonSesion.addEventListener('click', () => {
-    nuevaPagina("interfaz.html");
+    ingreso();
 })
 
 document.getElementById('forgot-passw').addEventListener('click', () => {
