@@ -70,7 +70,7 @@ const initGoogle = () => {
 /************************************************************Enviar correo de confirmación****************************************************************************/
 const verificar = () => {
     var actionCodeSettings = {
-        url: 'http://127.0.0.1:59523/src/VISTA/interfaz.html',// + firebase.auth().currentUser.email
+        url: 'https://jossielinn.github.io/Red-Social/src/VISTA/interfaz.html',// + firebase.auth().currentUser.email
         handleCodeInApp: false
     };
     const user = firebase.auth().currentUser;
